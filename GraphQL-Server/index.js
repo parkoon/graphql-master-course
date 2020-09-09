@@ -10,7 +10,7 @@ const typeDefs = gql`
   type Post {
     id: ID!
     body: String!
-    createAt: String!
+    createdAt: String!
     username: String!
   }
   type Query {
