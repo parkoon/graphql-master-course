@@ -1,5 +1,5 @@
-const Post = require("../../models/Post");
-const checkAuth = require("../../helpers/checkAuth");
+const Post = require("../models/Post");
+const checkAuth = require("../helpers/checkAuth");
 const { UserInputError } = require("apollo-server");
 
 module.exports = {
