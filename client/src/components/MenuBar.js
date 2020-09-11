@@ -3,6 +3,8 @@ import { Menu, Segment } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 function MenuBar() {
+  // 꿀팁!
+  // window pathname 에 따라 Menu 상태값 처리하기
   const pathname = window.location.pathname;
   const path = pathname === "/" ? "home" : pathname.substr(1);
 
