@@ -11,7 +11,6 @@ function useForm(callback, initialValues = {}) {
     callback();
   };
   return {
-    errors,
     values,
     onChange,
     onSubmit,
