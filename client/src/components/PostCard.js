@@ -3,6 +3,7 @@ import { Card, Icon, Label, Image, Button } from "semantic-ui-react";
 import moment from "moment";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/auth";
+import LikeButton from "./LikeButton";
 
 function PostCard({
   post: { body, craetedAt, id, username, likeCount, commentCount, likes },
@@ -26,14 +27,7 @@ function PostCard({
         <Card.Description>{body}</Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <Button as="div" labelPosition="right" onClick={likePost}>
-          <Button color="violet" basic>
-            <Icon name="heart" />
-          </Button>
-          <Label as="a" basic color="violet" pointing="left">
-            {likeCount}
-          </Label>
-        </Button>
+        <LikeButton user={user} post={{ id, likes, likeCount }} />
         <Button as="div" labelPosition="right" as={Link} to={`/posts/${id}`}>
           <Button color="blue" basic>
             <Icon name="comments" />
